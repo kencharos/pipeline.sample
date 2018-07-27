@@ -24,7 +24,7 @@ finally, got following result
 
 ## run test in bitbucket pipeline
 
-see [./bitbucket-pipelines.yml]
+see [bitbcuket pipeline configfile](./bitbucket-pipelines.yml)
 
 If you make other CI service's yaml,
 This probably works other CI services (ex, Travis, Circle CI, gitlab-ci, concource).
