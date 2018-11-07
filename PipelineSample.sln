@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PipelineSample", "PipelineSample\PipelineSample.csproj", "{70C9D827-2A0D-43F7-B5AA-B5F70D449FB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PipelineSample", "PipelineSample\PipelineSample.csproj", "{70C9D827-2A0D-43F7-B5AA-B5F70D449FB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PipelineSample.Test", "PipelineSample.Test\PipelineSample.Test.csproj", "{73E39EF1-FCF5-4644-BAC6-605B332A70B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PipelineSample.Test", "PipelineSample.Test\PipelineSample.Test.csproj", "{73E39EF1-FCF5-4644-BAC6-605B332A70B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtReport", "UtReport\UtReport.csproj", "{282E723E-DFED-4045-B492-0F03ADD7F3A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{73E39EF1-FCF5-4644-BAC6-605B332A70B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73E39EF1-FCF5-4644-BAC6-605B332A70B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73E39EF1-FCF5-4644-BAC6-605B332A70B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{282E723E-DFED-4045-B492-0F03ADD7F3A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{282E723E-DFED-4045-B492-0F03ADD7F3A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{282E723E-DFED-4045-B492-0F03ADD7F3A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{282E723E-DFED-4045-B492-0F03ADD7F3A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -5,25 +5,21 @@ pipelines:
     - step:
         name: test
         script:
-          - "dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=lcov PipelineSample.Test/"
+          - "sh ./runTest.sh"
         services: 
           - db  
         artifacts: 
-          - "**/cov*.info" # use coverage files next step.
-    - step:
-        name: make report
-        image: kaskada/lcov # use other iamge.
-        script:
-          - "genhtml PipelineSample.Test/coverage.info --output-directory out --branch-coverage"
-        artifacts:
-          - "out/**"
+          - "coverage-results/**" # use coverage files next step.
     - step:
         name: publish report to bitbucket download
         # see https://confluence.atlassian.com/bitbucket/deploy-build-artifacts-to-bitbucket-downloads-872124574.html
         image: eamonwoortman/alpine-curl-zip
         script:
-          - "zip -r coverage_${BITBUCKET_BRANCH}_${BITBUCKET_BUILD_NUMBER}.zip out"
+          - "zip -r coverage_${BITBUCKET_BRANCH}_${BITBUCKET_BUILD_NUMBER}.zip coverage-results"
           - curl -X POST --user "${BB_AUTH_STRING}" "https://api.bitbucket.org/2.0/repositories/${BITBUCKET_REPO_OWNER}/${BITBUCKET_REPO_SLUG}/downloads" --form files=@"coverage_${BITBUCKET_BRANCH}_${BITBUCKET_BUILD_NUMBER}.zip"
+          - "zip -r ut_${BITBUCKET_BRANCH}_${BITBUCKET_BUILD_NUMBER}.zip test-results"
+          - curl -X POST --user "${BB_AUTH_STRING}" "https://api.bitbucket.org/2.0/repositories/${BITBUCKET_REPO_OWNER}/${BITBUCKET_REPO_SLUG}/downloads" --form files=@"ut_${BITBUCKET_BRANCH}_${BITBUCKET_BUILD_NUMBER}.zip"
+
 definitions:
   services:
     db:

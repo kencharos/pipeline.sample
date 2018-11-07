@@ -5,7 +5,7 @@
 run sqlserver docker
 
 ```
-docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=SqlServerPass01" -p 1433:1433 -d microsoft/mssql-server-linux:2017-CU8
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MSsqlPassword01" -p 1433:1433 -d microsoft/mssql-server-linux:2017-CU8
 ```
 
 then, run test with coverage report.
