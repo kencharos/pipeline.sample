@@ -14,8 +14,14 @@ dotnet run --project UtReport UtReport/trxToJunit.xsl PipelineSample.Test/ut/res
 
 ret=$?
 
+
 if [ $ret -eq 0 ]; then
+  echo "cp coverage report."
   cp PipelineSample.Test/coverage.cobertura.xml coverage-results/PipelineSample.Test.coverage.xml
 fi
+
+echo "list artifact files"
+ls test-results/
+ls coverage-results/
 
 exit $ret

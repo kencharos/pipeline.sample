@@ -10,8 +10,8 @@ pipelines:
         services: 
           - db  
         artifacts: 
-          - "**/coverage-results/**" # use coverage files next step.
-          - "**/test-results/**"
+          - "coverage-results/**" # use coverage files next step.
+          - "test-results/**"
     - step:
         name: publish report to bitbucket download
         # see https://confluence.atlassian.com/bitbucket/deploy-build-artifacts-to-bitbucket-downloads-872124574.html
