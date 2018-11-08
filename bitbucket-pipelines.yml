@@ -5,6 +5,7 @@ pipelines:
     - step:
         name: test
         script:
+          - "sleep 20"
           - "sh ./runTest.sh"
         services: 
           - db  
