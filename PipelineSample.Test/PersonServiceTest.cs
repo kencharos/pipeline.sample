@@ -12,7 +12,7 @@ namespace PipelineSample.Test
         readonly SampleDbContext _ctx;
 
         //TODO environment variable.
-        readonly static string ConnectionString = "Server=127.0.0.1,143;Database=PersonServiceTest;User=sa;Password=SqlServerPass01";
+        readonly static string ConnectionString = "Server=127.0.0.1,1433;Database=PersonServiceTest;User=sa;Password=SqlServerPass01";
 
         public PersonServiceTest()
         {
