@@ -1,9 +1,11 @@
 #!/bin/sh
 
 #run test
+echo "build and test."
 dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura --logger:trx\;LogFileName=../ut/res.trx
 
 #make report
+echo "make reports"
 rm -rf test-results
 mkdir test-results
 rm -rf coverage-results
