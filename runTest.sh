@@ -14,7 +14,7 @@ dotnet run --project UtReport UtReport/trxToJunit.xsl PipelineSample.Test/ut/res
 
 ret=$?
 
-if test ret = 0; then
+if test $ret = 0; then
   cp PipelineSample.Test/coverage.cobertura.xml coverage-results/PipelineSample.Test.coverage.xml
 fi
 
